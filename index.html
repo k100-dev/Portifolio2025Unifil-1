@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início - MathFly</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* Estilos específicos para as abas */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .tab {
+            padding: 10px 20px;
+            background: var(--cor-principal);
+            color: var(--cor-secundaria);
+            border-radius: 5px 5px 0 0;
+            margin: 0 5px;
+            transition: background 0.3s;
+        }
+        .tab:hover {
+            background: var(--cor-claro);
+        }
+        .tab-content {
+            display: none;
+            background: var(--cor-secundaria);
+            color: var(--cor-escuro);
+            padding: 20px;
+            border: 1px solid var(--cor-principal);
+            border-radius: 0 0 5px 5px;
+            margin-top: -1px; /* Para evitar espaço entre as abas e o conteúdo */
+            width: 40%;
+            margin: 0 auto;
+        }
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="logo"><a href="index.html">MathFly</a></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="quem_somos.html">Quem Somos</a></li>
+                <li><a href="comunidade.html">Comunidade</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 class="animated-title">Bem-vindo ao MathFly</h1>
+
+        <div id="sobre-projeto">
+            <p class="text-size">
+                O MathFly é uma plataforma inovadora projetada para facilitar o aprendizado da matemática de forma dinâmica e interativa. Nossa equipe de desenvolvimento é composta por estudantes apaixonados por tecnologia e educação, comprometidos em criar um ambiente onde os usuários possam aprender e praticar matemática de maneira divertida.
+            </p>
+        </div>
+
+        <div class="tabs">
+            <div class="tab" onclick="showTab('como-funciona')">Como Funciona o Jogo</div>
+            <div class="tab" onclick="showTab('video')">Vídeo</div>
+            <div class="tab" onclick="showTab('repositorio')">Repositório do Jogo</div>
+        </div>
+
+        <div id="como-funciona" class="tab-content">
+            <h2>Como Funciona o Jogo</h2>
+            <p class="text-size-content">
+                O MathFly é um jogo interativo que desafia os usuários a resolverem problemas matemáticos de forma divertida e envolvente. Os jogadores avançam por diferentes fases, cada uma apresentando novos desafios e mecânicas de jogo.
+            </p>
+            <p class="text-size-content">
+                A plataforma utiliza elementos de gamificação para tornar o aprendizado mais interessante, permitindo que os usuários ganhem pontos e conquistem recompensas à medida que progridem.
+            </p>
+        </div>
+
+        <div id="video" class="tab-content">
+            <h2>Vídeo</h2>
+            <p>Assista ao vídeo abaixo para entender melhor como funciona o MathFly:</p>
+            <iframe
+                id="youtube-video"
+                width="91%"
+                height="370px"
+                src="https://www.youtube.com/embed/CeZJPnudesY?enablejsapi=1"
+                title="Video Player"
+                frameborder="0"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+            ></iframe>
+            <br>
+            <a href="https://www.youtube.com/watch?v=CeZJPnudesY" target="_blank" class="video-link">
+                <button style="padding: 10px 15px; border: none; border-radius: 5px; background-color: var(--cor-principal); color: var(--cor-secundaria); font-weight: bold; cursor: pointer;">
+                    Assistir no YouTube
+                </button>
+            </a>
+        </div>        
+
+        <div id="repositorio" class="tab-content">
+            <h2>Repositório do Jogo</h2>
+            <p>Você pode acessar o repositório do jogo MathFly no GitHub clicando no link abaixo:</p>
+            <a href="https://github.com/utrazin/mathFly" target="_blank" class="repositorio-link">Repositório MathFly</a>
+        </div>        
+
+        <div>
+            <p class="text-size">
+                Oferecemos uma variedade de recursos, incluindo jogos educativos, quizzes interativos e uma comunidade engajada, tudo voltado para tornar a matemática mais acessível a todos. Junte-se a nós e descubra como podemos transformar sua experiência de aprendizado!
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <img src="img/unifil.png" alt="Logo Unifil" style="height: 30px; vertical-align: middle; margin: 20px 0; width: 150px; height: auto;">
+        <p>&copy; 2025 MathFly - Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        let player;
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtube-video', {
+                events: {
+                    'onReady': onPlayerReady,
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            // O vídeo está pronto
+        }
+
+        function showTab(tabId) {
+            // Oculta todos os conteúdos das abas
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(tab => tab.classList.remove('active'));
+
+            // Mostra o conteúdo da aba selecionada
+            const activeTab = document.getElementById(tabId);
+            activeTab.classList.add('active');
+
+            // Pausa o vídeo se estiver em reprodução
+            if (player && tabId !== 'video') {
+                player.pauseVideo();
+            }
+        }
+
+        // Carregando a API do YouTube
+        const tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        const firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // Mostra a aba "Como Funciona o Jogo" por padrão
+        showTab('video');
+    </script>
+</body>
+</html>

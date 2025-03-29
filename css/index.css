@@ -1,0 +1,242 @@
+:root {
+    --cor-principal: #d32f2f;
+    --cor-secundaria: #ffffff;
+    --cor-claro: #f8d7da;
+    --cor-escuro: #a00;
+    --cor-gradiente: linear-gradient(135deg, #d32f2f 30%, #a00 100%);
+    --cor-fundo: url('background-texture.png'), linear-gradient(180deg, #ffffff 20%, #f8d7da 100%);
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: var(--cor-fundo);
+    color: var(--cor-escuro);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: var(--cor-principal);
+    padding: 20px;
+    text-align: center;
+}
+
+.logo a {
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-size: 50px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--cor-claro);
+}
+
+.container {
+    flex: 1;
+    padding: 20px;
+}
+
+.animated-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    animation: fadeIn 1.5s ease-in-out;
+    color: var(--cor-escuro);
+}
+
+.animated-subtitle {
+    font-size: 1rem;
+    font-weight: bold;
+    animation: fadeIn 1.5s ease-in-out;
+    color: var(--cor-escuro);
+}
+
+.integrantes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.integrante {
+    background: var(--cor-principal);
+    color: var(--cor-secundaria);
+    padding: 15px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.integrante:hover {
+    transform: scale(1.05);
+}
+
+.integrante img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.integrante h3 {
+    margin: 5px 0;
+}
+
+.integrante p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.integrante a {
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-weight: bold;
+    margin-top: 5px;
+    display: inline-block;
+    background: var(--cor-escuro);
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.integrante a:hover {
+    background: #800;
+}
+
+footer {
+    background: var(--cor-principal);
+    color: var(--cor-secundaria);
+    padding: 10px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+#sobre-equipe {
+    min-width: 350px;
+    width: 60%;
+    margin: 50px auto;
+    font-size: 20px;
+}
+
+.text-size {
+    min-width: 350px;
+    width: 50%;
+    margin: 50px auto;
+    font-size: 20px;
+}
+
+.text-size-content {
+    min-width: 350px;
+    width: 90%;
+    margin: 50px auto;
+    font-size: 20px;
+}
+
+.repositorio-link {
+    display: inline-block;
+    background: var(--cor-principal);
+    color: var(--cor-secundaria);
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+    margin-top: 10px;
+}
+
+.repositorio-link:hover {
+    background: var(--cor-claro);
+    transform: scale(1.05);
+}
+
+.video-link {
+    margin-top: 10px;
+    display: inline-block; /* Permite que o botão ocupe apenas o espaço necessário */
+}
+
+/* Adicionando estilos responsivos */
+@media (max-width: 890px) {
+    .container {
+        padding: 10px; /* Reduzir o padding em telas menores */
+    }
+
+    .tabs {
+        flex-direction: column;
+        margin: 0 auto; /* Exibir as abas em coluna */
+    }
+
+    .tab {
+        width: 50%; /* Ocupando 100% da largura */
+        margin: 5px auto; /* Espaçamento vertical entre abas */
+    }
+
+    .tab-content {
+        width: 90%; /* Aumentar a largura do conteúdo */
+        margin: 0 auto; /* Centralizar o conteúdo */
+    }
+
+    .integrantes {
+        flex-direction: column; /* Exibir integrantes em coluna */
+        align-items: center; /* Centralizar os integrantes */
+    }
+
+    .integrante {
+        width: 80%; /* Reduzir a largura dos integrantes */
+    }
+
+    #sobre-equipe {
+        width: 90%; /* Aumentar a largura do texto sobre a equipe */
+    }
+
+    .text-size,
+    .text-size-content {
+        width: 90%; /* Ajustar a largura dos textos */
+    }
+
+    iframe {
+        width: 100%; /* Tornar o iframe responsivo */
+        height: auto; /* Manter a proporção */
+    }
+}
+
+@media (max-width: 480px) {
+    .animated-title {
+        font-size: 2rem; /* Reduzir o tamanho da fonte do título em telas pequenas */
+    }
+
+    .text-size,
+    .text-size-content,
+    #sobre-equipe {
+        font-size: 18px;
+        max-width: 350px;
+        min-width: 50%; /* Ajustar tamanho da fonte */
+    }
+}
