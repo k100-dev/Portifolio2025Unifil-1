@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-        /* Estilos específicos para as abas */
         .tabs {
             display: flex;
             justify-content: center;
@@ -32,7 +31,7 @@
             padding: 20px;
             border: 1px solid var(--cor-principal);
             border-radius: 0 0 5px 5px;
-            margin-top: -1px; /* Para evitar espaço entre as abas e o conteúdo */
+            margin-top: -1px;
             width: 40%;
             margin: 0 auto;
         }
@@ -144,31 +143,25 @@
         }
 
         function onPlayerReady(event) {
-            // O vídeo está pronto
         }
 
         function showTab(tabId) {
-            // Oculta todos os conteúdos das abas
             const tabContents = document.querySelectorAll('.tab-content');
             tabContents.forEach(tab => tab.classList.remove('active'));
 
-            // Mostra o conteúdo da aba selecionada
             const activeTab = document.getElementById(tabId);
             activeTab.classList.add('active');
 
-            // Pausa o vídeo se estiver em reprodução
             if (player && tabId !== 'video') {
                 player.pauseVideo();
             }
         }
 
-        // Carregando a API do YouTube
         const tag = document.createElement('script');
         tag.src = "https://www.youtube.com/iframe_api";
         const firstScriptTag = document.getElementsByTagName('script')[0];
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-        // Mostra a aba "Como Funciona o Jogo" por padrão
         showTab('video');
     </script>
 </body>

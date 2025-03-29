@@ -179,60 +179,59 @@ footer {
 
 .video-link {
     margin-top: 10px;
-    display: inline-block; /* Permite que o botão ocupe apenas o espaço necessário */
+    display: inline-block;
 }
 
 .margin-Top {
     margin-top: 60px;
 }
 
-/* Adicionando estilos responsivos */
 @media (max-width: 890px) {
     .container {
-        padding: 10px; /* Reduzir o padding em telas menores */
+        padding: 10px;
     }
 
     .tabs {
-        flex-direction: column; /* Exibir as abas em coluna */
+        flex-direction: column;
     }
 
     .tab {
-        width: 50%; /* Ocupando 100% da largura */
-        margin: 5px auto; /* Espaçamento vertical entre abas */
+        width: 50%;
+        margin: 5px auto;
     }
 
     .tab-content {
-        width: 90%; /* Aumentar a largura do conteúdo */
-        margin: 0 auto; /* Centralizar o conteúdo */
+        width: 90%;
+        margin: 0 auto;
     }
 
     .integrantes {
-        flex-direction: column; /* Exibir integrantes em coluna */
-        align-items: center; /* Centralizar os integrantes */
+        flex-direction: column;
+        align-items: center;
     }
 
     .integrante {
-        width: 80%; /* Reduzir a largura dos integrantes */
+        width: 80%;
     }
 
     #sobre-equipe {
-        width: 90%; /* Aumentar a largura do texto sobre a equipe */
+        width: 90%;
     }
 
     .text-size,
     .text-size-content {
-        width: 90%; /* Ajustar a largura dos textos */
+        width: 90%;
     }
 
     iframe {
-        width: 100%; /* Tornar o iframe responsivo */
-        height: auto; /* Manter a proporção */
+        width: 100%;
+        height: auto;
     }
 }
 
 @media (max-width: 480px) {
     .animated-title {
-        font-size: 2rem; /* Reduzir o tamanho da fonte do título em telas pequenas */
+        font-size: 2rem;
     }
 
     .text-size,
@@ -240,6 +239,6 @@ footer {
     #sobre-equipe {
         font-size: 18px;
         max-width: 350px;
-        min-width: 50%; /* Ajustar tamanho da fonte */
+        min-width: 50%;
     }
 }
