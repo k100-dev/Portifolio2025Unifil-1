@@ -149,7 +149,7 @@ footer {
 .text-size {
     min-width: 350px;
     width: 50%;
-    margin: 50px auto;
+    margin: 20px auto;
     font-size: 20px;
 }
 
@@ -182,6 +182,10 @@ footer {
     display: inline-block; /* Permite que o botão ocupe apenas o espaço necessário */
 }
 
+.margin-Top {
+    margin-top: 60px;
+}
+
 /* Adicionando estilos responsivos */
 @media (max-width: 890px) {
     .container {
@@ -189,8 +193,7 @@ footer {
     }
 
     .tabs {
-        flex-direction: column;
-        margin: 0 auto; /* Exibir as abas em coluna */
+        flex-direction: column; /* Exibir as abas em coluna */
     }
 
     .tab {
