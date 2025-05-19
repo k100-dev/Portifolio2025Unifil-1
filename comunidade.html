@@ -1,99 +1,135 @@
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comunidade - MathFly</title>
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-        .math-icons {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0;
+        .community-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 2rem 0;
+            box-shadow: var(--shadow);
         }
-        .math-icons i {
-            font-size: 40px;
-            color: #ffffff;
-            margin: 0 15px;
-            background-color: #d32f2f;
-            border-radius: 50%;
-            padding: 10px 12px;
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background-color: var(--color-white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+
+        .feature-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--color-primary-dark);
+        }
+
+        .age-range {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .age-range h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
         }
 
         @media (max-width: 768px) {
-            .text-size {
-                font-size: 16px;
-            }
-
-            .math-icons i {
-                font-size: 30px;
-                margin: 0 10px;
-            }
-
-            img {
-                width: 100%;
-                height: auto;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .text-size {
-                font-size: 14px;
-            }
-
-            .math-icons i {
-                font-size: 24px;
-                margin: 0 5px;
+            .feature-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1 class="logo"><a href="index.html">MathFly</a></h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="quem_somos.html">Quem Somos</a></li>
-                <li><a href="comunidade.html">Comunidade</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo"><a href="index.html">MathFly</a></h1>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="quem-somos.html">Quem Somos</a></li>
+                    <li><a href="comunidade.html" class="active">Comunidade</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <div class="container">
-        <h1 class="animated-title">Comunidade MathFly</h1>
-        <p class="animated-subtitle">Uma experiência de aprendizado colaborativa e envolvente</p>
+    <main class="main">
+        <section class="hero">
+            <h1 class="hero-title">Comunidade MathFly</h1>
+            <p class="hero-subtitle">Uma experiência de aprendizado colaborativa e envolvente</p>
+        </section>
 
-        <div id="sobre-comunidade">
-            <p class="text-size">
-                O MathFly é uma ferramenta inovadora que transforma o aprendizado de matemática em uma experiência interativa e envolvente, utilizando elementos de gamificação para estimular o raciocínio lógico e a resolução de problemas. Ao adaptar-se a diferentes níveis de conhecimento, o jogo atende tanto estudantes iniciantes quanto avançados, promovendo um ambiente inclusivo e motivador. Além disso, ao envolver educadores e pais no processo de aprendizado, o MathFly cria uma comunidade colaborativa que fortalece o interesse pela matemática e reduz a ansiedade associada à disciplina. Com essa abordagem, o MathFly não apenas facilita a compreensão dos conceitos matemáticos, mas também torna o aprendizado mais acessível e prazeroso para todos.
-            </p>
-            
-            <div class="math-icons">
-                <i class="fa-solid fa-plus"></i>
-                <i class="fa-solid fa-minus"></i>
-                <i class="fa-solid fa-xmark"></i>
-                <i class="fa-solid fa-divide"></i>
+        <section class="content-section">
+            <p>O MathFly é uma ferramenta inovadora que transforma o aprendizado de matemática em uma experiência interativa e envolvente, utilizando elementos de gamificação para estimular o raciocínio lógico e a resolução de problemas.</p>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-gamepad feature-icon"></i>
+                    <h3 class="feature-title">Gamificação</h3>
+                    <p>Elementos de jogos que tornam o aprendizado mais divertido e envolvente.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-users feature-icon"></i>
+                    <h3 class="feature-title">Comunidade</h3>
+                    <p>Ambiente colaborativo que conecta estudantes, educadores e pais.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-brain feature-icon"></i>
+                    <h3 class="feature-title">Adaptativo</h3>
+                    <p>Conteúdo que se adapta ao nível de conhecimento de cada usuário.</p>
+                </div>
             </div>
 
-            <p class="text-size">
-                A faixa etária recomendada para o "MathFly" varia entre 11 e 18 anos, sendo ideal para alunos do ensino fundamental e médio. No entanto, o jogo pode ser adaptado para outros níveis de conhecimento, permitindo que estudantes iniciantes ou mais avançados encontrem desafios adequados às suas habilidades.
-            </p>
+            <div class="age-range">
+                <h3>Faixa Etária Recomendada</h3>
+                <p>O MathFly é ideal para estudantes entre 11 e 18 anos, abrangendo o ensino fundamental e médio. No entanto, o jogo pode ser adaptado para diferentes níveis de conhecimento.</p>
+            </div>
 
-            <img src="img/sala.jpg" alt="Descrição da Imagem 2" style="width: 100%; max-width: 600px; margin: 20px 0; border-radius: 8px;">
+            <img src="img/sala.jpg" alt="Sala de aula com estudantes" class="community-image">
 
-            <p class="text-size">
-                Além dos estudantes, educadores e pais se beneficiam ao contar com uma ferramenta interativa que complementa o ensino tradicional. O MathFly contribui para essa comunidade ao transformar a aprendizagem matemática em uma experiência envolvente, utilizando desafios e enigmas para estimular o raciocínio lógico e a resolução de problemas de forma lúdica.
-                <br>
-                Dessa maneira, o jogo torna o estudo da matemática mais acessível, motivador e eficaz, ajudando a reduzir dificuldades e aumentar o interesse dos alunos pela disciplina.
-            </p>
-        </div>
-    </div>
+            <p>Além dos estudantes, educadores e pais se beneficiam ao contar com uma ferramenta interativa que complementa o ensino tradicional. O MathFly contribui para essa comunidade ao transformar a aprendizagem matemática em uma experiência envolvente, utilizando desafios e enigmas para estimular o raciocínio lógico e a resolução de problemas de forma lúdica.</p>
+            
+            <p>Dessa maneira, o jogo torna o estudo da matemática mais acessível, motivador e eficaz, ajudando a reduzir dificuldades e aumentar o interesse dos alunos pela disciplina.</p>
+        </section>
+    </main>
 
-    <footer>
-        <img src="img/unifil.png" alt="Logo Unifil" style="height: 30px; vertical-align: middle; margin: 20px 0; width: 150px; height: auto;">
+    <footer class="footer">
+        <img src="img/unifil.png" alt="Logo Unifil" class="footer-logo">
         <p>&copy; 2025 MathFly - Todos os direitos reservados</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

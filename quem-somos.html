@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem Somos - MathFly</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .team-member {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow);
+        }
+
+        .member-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            border: 4px solid var(--color-white);
+            overflow: hidden;
+        }
+
+        .member-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .member-name {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .member-role {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: var(--color-primary-dark);
+            color: var(--color-white);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background-color: var(--color-primary-darker);
+        }
+
+        .team-description {
+            max-width: 800px;
+            margin: 3rem auto;
+            text-align: center;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo"><a href="index.html">MathFly</a></h1>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="quem-somos.html" class="active">Quem Somos</a></li>
+                    <li><a href="comunidade.html">Comunidade</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <h1 class="hero-title">Quem Somos</h1>
+            <p class="hero-subtitle">Conheça a equipe por trás do MathFly</p>
+        </section>
+
+        <section class="content-section">
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="img/Vitor.foto.jpg" alt="Vitor Cruz">
+                    </div>
+                    <h3 class="member-name">Vitor Cruz</h3>
+                    <p class="member-role">Engenharia de Software</p>
+                    <a href="https://github.com/VCruuz" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="img/Ithallo.foto.jpg" alt="Ithallo Emanuel">
+                    </div>
+                    <h3 class="member-name">Ithallo Emanuel</h3>
+                    <p class="member-role">Engenharia de Software</p>
+                    <a href="https://github.com/ithalloe" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="img/Enzo.foto.jpg" alt="Enzo Dutra">
+                    </div>
+                    <h3 class="member-name">Enzo Dutra</h3>
+                    <p class="member-role">Engenharia de Software</p>
+                    <a href="https://github.com/utrazin" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="img/Tarik.foto.jpg" alt="Tarik Kassem">
+                    </div>
+                    <h3 class="member-name">Tarik Kassem</h3>
+                    <p class="member-role">Engenharia de Software</p>
+                    <a href="https://github.com/k100-dev" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="img/Math.foto.jpg" alt="Matheus Schneider">
+                    </div>
+                    <h3 class="member-name">Matheus Schneider</h3>
+                    <p class="member-role">Engenharia de Software</p>
+                    <a href="https://github.com/matzikaaa" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+
+            <div class="team-description">
+                <p>A equipe do MathFly é formada por cinco estudantes apaixonados por tecnologia e educação. Nosso objetivo é criar uma plataforma inovadora que torne o aprendizado da matemática mais acessível e dinâmico.</p>
+                <p>Com dedicação e trabalho em equipe, unimos conhecimento em programação, design e pedagogia para desenvolver um ambiente interativo e envolvente. Estamos sempre buscando novas soluções para transformar a maneira como as pessoas aprendem, tornando a matemática mais divertida e descomplicada para todos.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <img src="img/unifil.png" alt="Logo Unifil" class="footer-logo">
+        <p>&copy; 2025 MathFly - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
