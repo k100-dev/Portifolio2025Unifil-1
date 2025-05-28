@@ -1,7 +1,6 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exile&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         .team-grid {
             display: grid;
@@ -52,7 +52,7 @@
         }
 
         .member-name {
-            font-family:  "Exile", system-ui;
+            font-family: "Exile", system-ui;
             font-size: 1.5rem;
             font-weight: 300;
             margin-bottom: 0.5rem;
@@ -65,7 +65,7 @@
             margin-bottom: 1rem;
         }
 
-          .member-duty {
+        .member-duty {
             font-family: "WDXL Lubrifont TC", sans-serif;
             font-size: 1.1rem;
             opacity: 0.9;
@@ -83,6 +83,7 @@
             border-radius: 4px;
             text-decoration: none;
             transition: var(--transition);
+            border-radius: 10px;
         }
 
         .social-link:hover {
@@ -97,6 +98,7 @@
         }
     </style>
 </head>
+
 <body>
     <header class="header">
         <div class="header-content">
@@ -120,9 +122,9 @@
             <p class="hero-subtitle">Conheça a equipe por trás do MathFly</p>
         </section>
 
-        <section class="content-section">
+        <section class="content-section" >
             <div class="team-grid">
-                <div class="team-member">
+                <div class="team-member" data-aos="fade-up">
                     <div class="member-image">
                         <img src="img/Vitor.foto.jpg" alt="Vitor Cruz">
                     </div>
@@ -135,7 +137,7 @@
                     </a>
                 </div>
 
-                <div class="team-member">
+                <div class="team-member" data-aos="fade-up">
                     <div class="member-image">
                         <img src="img/Ithallo.foto.jpg" alt="Ithallo Emanuel">
                     </div>
@@ -148,7 +150,7 @@
                     </a>
                 </div>
 
-                <div class="team-member">
+                <div class="team-member" data-aos="fade-up">
                     <div class="member-image">
                         <img src="img/Enzo.foto.jpg" alt="Enzo Dutra">
                     </div>
@@ -161,7 +163,7 @@
                     </a>
                 </div>
 
-                <div class="team-member">
+                <div class="team-member" data-aos="fade-up">
                     <div class="member-image">
                         <img src="img/Tarik.foto.jpg" alt="Tarik Kassem">
                     </div>
@@ -174,7 +176,7 @@
                     </a>
                 </div>
 
-                <div class="team-member">
+                <div class="team-member" data-aos="fade-up">
                     <div class="member-image">
                         <img src="img/Math.foto.jpg" alt="Matheus Schneider">
                     </div>
@@ -186,7 +188,7 @@
                         GitHub
                     </a>
                 </div>
-                    <div class="team-member">
+                <div class="team-member" data-aos="fade-up">
                     <div class="member-image">
                         <img src="img/Daniel.foto.jpg" alt="Daniel Cobra">
                     </div>
@@ -200,12 +202,17 @@
                 </div>
             </div>
 
-        
-            
 
-            <div class="team-description">
-                <p>A equipe do MathFly é formada por cinco estudantes apaixonados por tecnologia e educação. Nosso objetivo é criar uma plataforma inovadora que torne o aprendizado da matemática mais acessível e dinâmico.</p>
-                <p>Com dedicação e trabalho em equipe, unimos conhecimento em programação, design e pedagogia para desenvolver um ambiente interativo e envolvente. Estamos sempre buscando novas soluções para transformar a maneira como as pessoas aprendem, tornando a matemática mais divertida e descomplicada para todos.</p>
+
+
+            <div class="team-description" data-aos="fade-up">
+                <p>A equipe do MathFly é formada por cinco estudantes apaixonados por tecnologia e educação. Nosso
+                    objetivo é criar uma plataforma inovadora que torne o aprendizado da matemática mais acessível e
+                    dinâmico.</p>
+                <p>Com dedicação e trabalho em equipe, unimos conhecimento em programação, design e pedagogia para
+                    desenvolver um ambiente interativo e envolvente. Estamos sempre buscando novas soluções para
+                    transformar a maneira como as pessoas aprendem, tornando a matemática mais divertida e descomplicada
+                    para todos.</p>
             </div>
         </section>
     </main>
@@ -214,7 +221,11 @@
         <img src="img/unifil.png" alt="Logo Unifil" class="footer-logo">
         <p>&copy; 2025 MathFly - Todos os direitos reservados</p>
     </footer>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+     AOS.init();
+    </script>
     <script src="script.js"></script>
 </body>
+
 </html>
