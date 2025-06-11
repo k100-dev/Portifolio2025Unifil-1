@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +7,49 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-      
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #f4f4f4;
+            border-radius: 12px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .contact-form label {
+            font-weight: bold;
+        }
+
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            padding: 0.75rem;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+        }
+
+        .btn-enviar {
+            background-color: #4CAF50;
+            color: white;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-enviar:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
@@ -34,29 +77,30 @@
         </section>
 
         <section class="content-section">
-            <p>.</p>
+            <p>Queremos ouvir você! Use o formulário abaixo para enviar dúvidas, sugestões ou relatar qualquer problema. Sua opinião ajuda o MathFly a voar mais alto! 🚀</p>
 
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <i class="fas fa-gamepad feature-icon"></i>
-                    <h3 class="feature-title">[titulo]</h3>
-                    <p>[texto paragráfo]</p>
-                </div>
+            <form action="enviar-feedback.php" method="post" class="contact-form">
+                <label for="nome">Nome completo:</label>
+                <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
 
-                <div class="feature-card">
-                    <i class="fas fa-users feature-icon"></i>
-                    <h3 class="feature-title">[titulo]</h3>
-                    <p>[texto paragráfo]</p>
-                </div>
+                <label for="email">E-mail para contato:</label>
+                <input type="email" id="email" name="email" required placeholder="exemplo@email.com">
 
-                <div class="feature-card">
-                    <i class="fas fa-brain feature-icon"></i>
-                    <h3 class="feature-title">[titulo]</h3>
-                    <p>[texto paragráfo]</p>
-                </div>
-            </div>
+                <label for="assunto">Assunto:</label>
+                <select id="assunto" name="assunto" required>
+                    <option value="">Selecione</option>
+                    <option value="duvida">Dúvida</option>
+                    <option value="sugestao">Sugestão</option>
+                    <option value="erro">Relatar erro</option>
+                    <option value="outros">Outros</option>
+                </select>
 
-            </section>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Escreva sua mensagem aqui..."></textarea>
+
+                <button type="submit" class="btn-enviar"><i class="fas fa-paper-plane"></i> Enviar</button>
+            </form>
+        </section>
     </main>
 
     <footer class="footer">
