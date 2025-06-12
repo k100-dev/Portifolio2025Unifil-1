@@ -1,10 +1,12 @@
 :root {
-    --cor-principal: #d32f2f;
+    --cor-principal: #4e007a;
     --cor-secundaria: #ffffff;
-    --cor-claro: #f8d7da;
-    --cor-escuro: #a00;
-    --cor-gradiente: linear-gradient(135deg, #d32f2f 30%, #a00 100%);
-    --cor-fundo: url('background-texture.png'), linear-gradient(180deg, #ffffff 20%, #f8d7da 100%);
+    --cor-claro: #c9a0ff;
+    --cor-escuro: #2e004a;
+    --cor-gradiente: linear-gradient(135deg, #7b33ff 30%, #4e007a 100%);
+    --cor-fundo: 
+        url('background-texture.png'), 
+        linear-gradient(180deg, #ffffff 20%, #c9a0ff 100%);
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -244,10 +246,10 @@ footer {
 }
 
 :root {
-    --color-primary: #d32f2f;
-    --color-primary-dark: #a00;
-    --color-primary-darker: #800;
-    --color-light: #f8d7da;
+    --color-primary: #4e007a;
+    --color-primary-dark: #2e004a;
+    --color-primary-darker: #1b002a;
+    --color-light: #c9a0ff;
     --color-white: #ffffff;
     --transition: 0.3s ease-in-out;
     --shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
