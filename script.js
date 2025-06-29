@@ -87,3 +87,50 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Player state changed:', event.data);
     }
 });
+
+document.querySelectorAll('.icon-container').forEach(container => {
+  container.addEventListener('click', () => {
+    const icon = container.querySelector('i');
+    let symbol = '?';
+
+    if (icon.classList.contains('fa-plus')) symbol = '+';
+    else if (icon.classList.contains('fa-minus')) symbol = '−';
+    else if (icon.classList.contains('fa-times')) symbol = '×';
+    else if (icon.classList.contains('fa-divide')) symbol = '÷';
+
+    const rect = container.getBoundingClientRect();
+
+    for (let i = 0; i < 40; i++) {
+      const confetti = document.createElement('div');
+      confetti.className = 'confetti-symbol';
+      confetti.textContent = symbol;
+
+      const color = getRandomColor();
+      confetti.style.color = color;
+
+      // Tamanho aleatório entre 24px e 44px
+      const size = 24 + Math.random() * 20;
+      confetti.style.fontSize = `${size}px`;
+
+      // Ajusta a posição inicial para o centro do ícone (subtraindo metade do tamanho)
+      confetti.style.left = `${rect.left + rect.width / 2 - size / 2}px`;
+      confetti.style.top = `${rect.top + rect.height / 2 - size / 2}px`;
+
+      // Posição final aleatória para animação (relativa à posição inicial)
+      const x = Math.random() * window.innerWidth - rect.left;
+      const y = Math.random() * window.innerHeight - rect.top;
+
+      confetti.style.setProperty('--x', `${x}px`);
+      confetti.style.setProperty('--y', `${y}px`);
+
+      document.body.appendChild(confetti);
+
+      setTimeout(() => confetti.remove(), 2000);
+    }
+  });
+});
+
+function getRandomColor() {
+  const colors = ['#ff595e', '#ffca3a', '#8ac926', '#1982c4', '#6a4c93'];
+  return colors[Math.floor(Math.random() * colors.length)];
+}

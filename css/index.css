@@ -453,6 +453,7 @@ body {
     text-decoration: none;
     border-radius: 4px;
     transition: var(--transition);
+    margin: 20px 0;
 }
 
 .btn:hover {
@@ -549,4 +550,24 @@ body {
     .icon-container i {
         font-size: 1.2rem;
     }
+}
+
+.confetti-symbol {
+  position: fixed;
+  font-weight: bold;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.9;
+  animation: fall 2s ease-out forwards;
+}
+
+@keyframes fall {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--x), var(--y)) rotate(720deg);
+    opacity: 0;
+  }
 }

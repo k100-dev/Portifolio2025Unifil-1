@@ -10,7 +10,7 @@
 <body>
     <header class="header">
         <div class="header-content">
-            <h1 class="logo"><a href="index.html">MathFly</a></h1>
+            <h1 class="logo"><a href="index.html"><img src="img/Math Fly Logo Branco.png" style="width: 160px"></a></h1>
             <button class="mobile-menu-btn" aria-label="Menu">
                 <i class="fas fa-bars"></i>
             </button>
@@ -19,7 +19,8 @@
                     <li><a href="index.html" class="active">Início</a></li>
                     <li><a href="quem-somos.html">Quem Somos</a></li>
                     <li><a href="comunidade.html">Comunidade</a></li>
-                    <li><a href="fale-conosco.html">Fale Conosco</a></li>
+                    <li><a href="documentacao.html">Documentação</a></li>
+                    <!-- <li><a href="fale-conosco.html">Fale Conosco</a></li> -->
                 </ul>
             </nav>
         </div>
@@ -37,6 +38,7 @@
                     <button class="tab-btn active" data-tab="como-funciona">Como Funciona</button>
                     <button class="tab-btn" data-tab="video">Vídeo</button>
                     <button class="tab-btn" data-tab="repositorio">Repositório</button>
+                    <button class="tab-btn" data-tab="mvp">MVP</button>
                 </div>
 
                 <div class="tab-content active" id="como-funciona">
@@ -49,11 +51,11 @@
                     <h2>Vídeo Demonstrativo</h2>
                     <div class="video-container">
                         <iframe
-                            id="youtube-player"
-                            src="https://www.youtube.com/embed/CeZJPnudesY"
-                            title="MathFly Demo"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
+                        id="youtube-player"
+                        src="https://www.youtube.com/embed/CeZJPnudesY"
+                        title="MathFly Demo"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
                         </iframe>
                     </div>
                     <a href="https://www.youtube.com/watch?v=CeZJPnudesY" target="_blank" class="btn">Ver no YouTube</a>
@@ -63,6 +65,12 @@
                     <h2>Repositório do Projeto</h2>
                     <a href="https://github.com/utrazin/mathFly" target="_blank" class="btn">Ver no GitHub</a>
                     <p>Acesse nosso código fonte no GitHub!</p>
+                </div>
+
+                <div class="tab-content" id="mvp">
+                    <h2>Documento MVP</h2>
+                    <a href="https://mathfly-72dac9eeab21.herokuapp.com/" target="_blank" class="btn">Acessar MVP</a>
+                    <p>Veja o <b>Produto Mínimo Viável (MVP)</b> e teste seus conhecimentos matemáticos no <b>MathFly</b>.</p>
                 </div>
             </div>
         </section>
@@ -105,6 +113,7 @@
         <p>&copy; 2025 MathFly - Todos os direitos reservados</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
