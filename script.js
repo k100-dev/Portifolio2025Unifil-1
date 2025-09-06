@@ -60,32 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
         section.style.transition = 'opacity 0.5s, transform 0.5s';
         observer.observe(section);
     });
-
-    // YouTube API integration
-    let player;
-    const tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    const firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-    window.onYouTubeIframeAPIReady = () => {
-        player = new YT.Player('youtube-player', {
-            events: {
-                'onReady': onPlayerReady,
-                'onStateChange': onPlayerStateChange
-            }
-        });
-    };
-
-    function onPlayerReady(event) {
-        // Player is ready
-        console.log('YouTube player is ready');
-    }
-
-    function onPlayerStateChange(event) {
-        // Handle player state changes
-        console.log('Player state changed:', event.data);
-    }
 });
 
 document.querySelectorAll('.icon-container').forEach(container => {
